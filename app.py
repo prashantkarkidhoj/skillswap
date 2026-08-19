@@ -1,3 +1,15 @@
-print("SkillSwap backend starting")
-print("Version 2")
-print("i am getting the job in the next 2 months")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "SkillSwap is running!"
+
+def add_numbers(a, b):
+    return a + b
+
+print(add_numbers(3, 5))
+
+if __name__ == "__main__":
+    app.run(debug=True)
